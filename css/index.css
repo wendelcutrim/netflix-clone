@@ -131,13 +131,17 @@ section.motivos div {
 
 section.motivos div h1 {
   font-size: 60px;
+  width: 60%;
+  margin-bottom: 10px;
 }
 
 section.motivos div p {
   font-size: 30px;
+  width: 60%;
 }
 
 section.motivos div img {
+  padding: 0 80px;
 }
 
 hr.divisor {
@@ -148,4 +152,69 @@ hr.divisor {
 
 .alterna {
   flex-direction: row-reverse;
+}
+
+section.faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  padding: 60px;
+  position: relative;
+}
+
+section.faq h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+section.faq #faq-dropdown {
+  background-color: #303030;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  padding: 30px;
+  align-items: center;
+  margin: 15px auto;
+  width: 50%;
+  font-weight: 400;
+  position: relative;
+}
+
+section.faq #faq-dropdown h3 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+section.faq #faq-dropdown button, label {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+#show-details {
+  display: none;
+}
+
+section.faq #faq-dropdown-text {
+  display: none;
+  position: absolute;
+  background-color: #303030;
+  color: white;
+  top: 82px;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  font-size: 20px;
+}
+#show-details:checked ~ #faq-dropdown-text {
+  display: block;
+}
+
+#show-details:checked label::after {
+  transform: rotate(255deg);
 }
